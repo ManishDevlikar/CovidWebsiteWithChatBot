@@ -1,0 +1,85 @@
+
+The actual code is present in the .HTML, .css and .js file
+This secssion is just for Quik view.
+
+
+#HTML code to add Azure bot framework  which is used in project
+
+<-- Bot Section Start -->
+
+    <div class="chatbot">
+        <img src="/images/ChatBot.png" alt="bot-image">
+    </div>
+
+    <div class="chatbox">
+        <div class="wrap">
+
+            <iframe src='https://webchat.botframework.com/embed/covidwebbot-bot?s=fxGB8d0l2ME.OoDOb5CSq4Xt3wVAdMNieD8rPwJtjD3YKiOmBsMycXw'  style='min-width: 20vw; width: 42%; min-height: 60vh; height: 60vh;'></iframe>
+
+        </div>
+    </div>
+
+
+    <!-- Bot Section Ends -->
+
+# java script code for bot framework which is used in this project
+
+
+    // ------ CHATBOT TRANSITION------
+
+$(document).ready(function() {
+	$(".chatbot").click(function(event){
+	   $(".chatbot").toggleClass('active');
+	   $(".chatbox").toggleClass('active');
+	});
+ });
+
+ //------IFRAME BACKGROUND------
+
+ $('iframe').css('background', 'white');
+ $('iframe').contents().find('body').css('backgroundColor', 'white');
+
+
+# CSS code for bot framework.
+
+/* ----- Chatbot Start  ----- */
+
+.chatbot{
+    height: 8rem;
+	position: fixed;
+	left : 5vh;
+	bottom: 20px;
+	font-size: 80px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	z-index: 3000;
+	transition: all 0.3s ease-out;
+
+}
+
+.chatbot.active{	
+	transform: rotate(360deg);
+}
+
+.chatbox{
+	position: fixed;
+	left: 90px;
+	bottom: 25%;
+	width: 50rem;
+	height: 50vh;
+    z-index: 3000;
+	transition: all 0.3s ease-out;
+	transform: scaleY(0);
+
+}
+
+.chatbox.active{
+	transform: scaleY(1);
+}
+
+/* ----- Chatbot End  ----- */
+
+
+
+
+
